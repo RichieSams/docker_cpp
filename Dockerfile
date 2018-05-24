@@ -9,5 +9,8 @@ RUN apk add --no-cache \
 COPY docker-entrypoint.sh /
 RUN chmod a+x /docker-entrypoint.sh
 
+RUN mkdir /app
+WORKDIR /app
+
 ENTRYPOINT ["/docker-entrypoint.sh"]
 CMD ["/bin/sh"]
