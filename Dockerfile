@@ -4,7 +4,8 @@ RUN apk add --no-cache \
         g++ \
         gcc \
 		make \
-        cmake
+        cmake \
+		curl-dev
 
 COPY docker-entrypoint.sh /
 RUN chmod a+x /docker-entrypoint.sh
